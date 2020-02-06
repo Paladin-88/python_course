@@ -1,0 +1,6 @@
+seq = open('input.txt', 'r')
+seq = seq.read().split()
+myDict = {}
+for elem in seq:
+    myDict[elem] = myDict.get(elem, 0) + 1
+print(max(sorted(myDict.keys()), key=lambda x: myDict[x]))
