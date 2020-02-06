@@ -1,0 +1,11 @@
+code = open('input.txt', 'r')
+stroka = code.read().split()
+s = str(stroka[0])
+dict = []
+for i in s:
+    if not i.isdigit():
+        dict.append(i)
+    else:
+        dict[-1] += i
+
+print(*[i[0]*int(i[1:]) for i in dict], sep='')
