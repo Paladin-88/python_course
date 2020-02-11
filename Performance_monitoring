@@ -1,0 +1,18 @@
+text = open('input.txt', 'r')
+list = []
+for i in text:
+    list.extend([i.strip().split(';')])
+list.append(['Nikto', '0', '0', '0'])
+math = 0
+phisic = 0
+russian = 0
+n = 0
+while n < (len(list) - 1):
+    math += int(list[n][1])
+    phisic += int(list[n][2])
+    russian += int(list[n][3])
+    sred = int(list[n][1]) + int(list[n][2]) + int(list[n][3])
+    print(sred / 3)
+    n += 1
+
+print(math/(len(list) - 1), phisic/(len(list) - 1), russian/(len(list) - 1))
