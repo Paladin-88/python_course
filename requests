@@ -1,0 +1,7 @@
+import requests
+line = 0
+text = open('input.txt', 'r').read().strip()
+r = requests.get(text)
+for i in r.text.splitlines():
+    line += 1
+print(line)
