@@ -1,0 +1,11 @@
+import requests
+url = "https://stepic.org/media/attachments/course67/3.6.3/"
+text = '699991.txt'
+while True:
+    print(text)
+    r = requests.get(url + text)
+    if 'We' in r.text:
+        print(r.text)
+        break
+    else:
+        text = r.text
