@@ -1,0 +1,20 @@
+ishod = input()       # Символы исходного алфавита
+konec = input()       # символы конечного алфавита
+shifr = input()       # строка, которую нужно зашифровать переданным ключом
+ras_shifr = input()   # строка, которую нужно расшифровать.
+dict = {}
+dict2 = {}
+
+c = 0
+while c < len(ishod):
+    dict[ishod[c]] = konec[c]           # создаем словарь зашифрованных символов
+    dict2[konec[c]] = ishod[c]          # создаем словарь для расшифровки символов
+    c+=1
+
+for i in shifr:
+    print(dict[i], end = '')
+
+print('')
+
+for r in ras_shifr:
+    print(dict2[r], end = '')
