@@ -1,0 +1,11 @@
+n = int(input())                       # Количество строк координат
+coord = {'север': 0, 'запад': 0, 'юг': 0, 'восток': 0}
+for n in range(n):                     # Добавляем слова в словарь
+    line = input().split(" ")
+    if line[0] == 0 in coord:
+        coord[line[0]] = line[1]
+    else:
+        coord[line[0]] += int(line[1])
+
+print(int(coord['восток']) - int(coord['запад']), end=' ') # Выводим первую координату
+print(int(coord['север']) - int(coord['юг']) , end='')     # ВЫводим вторую координату
