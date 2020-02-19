@@ -1,0 +1,16 @@
+count_word = int(input())                       # Количество слов в словаре
+words = set()
+for n in range(count_word):                     # Добавляем слова в словарь
+    word = input().lower()
+    words.add(word)
+
+count_str = int(input())                        # Количество строк
+stroki = set()
+for n in range(count_str):                      # Добавляем слова из строк во множество
+    line = input().lower().split(" ")
+    for i in line:
+        stroki.add(i)
+
+dict = stroki - words                           # Считаем количество допущенных ошибок
+for c in dict:
+    print(c)
