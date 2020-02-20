@@ -1,0 +1,21 @@
+code = open('input.txt', 'r', encoding='utf8')
+list = []
+common_growth = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0}
+count = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0}
+midddle_growth = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0}
+
+for i in code:
+    list.extend([i.strip().split()])
+
+for k in range(len(list)):
+    common_growth[int(list[k][0])] += int(list[k][2])
+    count[int(list[k][0])] += 1
+
+for n in midddle_growth:
+    if common_growth[n] != 0 and count[n] != 0:
+        midddle_growth[n] = (common_growth[n] / count[n])
+    else:
+        midddle_growth[n] = '-'
+
+for key, value in midddle_growth.items():
+    print(key, value)
