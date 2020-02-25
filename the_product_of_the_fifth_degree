@@ -1,0 +1,2 @@
+from functools import reduce
+print(reduce(lambda a,x:a*(x**5), map(int, ('1 ' + input()).split())))
