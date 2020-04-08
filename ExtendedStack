@@ -1,0 +1,27 @@
+class ExtendedStack(list):
+    def sum(self):        # операция сложения
+        summa = self[-1] + self[-2]
+        self.pop()
+        self.pop()
+        self.append(summa)
+        
+
+    def sub(self):           # операция вычитания
+        sub = self[-1] - self[-2]
+        self.pop()
+        self.pop()
+        self.append(sub)
+       
+    def mul(self):            # операция умножения
+        mul = self[-1] * self[-2]
+        self.pop()
+        self.pop()
+        self.append(mul)
+        
+
+    def div(self):               # операция целочисленного деления
+        div = self[-1] // self[-2]
+        self.pop()
+        self.pop()
+        self.append(div)
+     
