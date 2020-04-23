@@ -1,0 +1,8 @@
+from datetime import datetime, date, time, timedelta
+
+year, month, day = map(int, input().split())
+days = int(input())
+d = date(year, month, day)
+delta = timedelta(days)
+
+print((d + delta).strftime("%Y %m %d").replace(" 0", " "))
