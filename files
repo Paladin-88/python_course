@@ -1,0 +1,6 @@
+with open('input.txt', 'r') as i, open('output.txt', 'w') as out:
+    l = i.read().split()
+    s = l[::-1]
+
+    for k in s:
+        out.write(k +'\n')
