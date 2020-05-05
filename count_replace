@@ -1,0 +1,15 @@
+s = input()
+a = input()
+b = input()
+
+count = 0
+
+while a in s and a != b and a not in b:
+    s = s.replace(a, b)
+    count += 1
+
+if count > 1000 or a in s and a in b:
+    print("Impossible")
+
+else:
+    print(count)
