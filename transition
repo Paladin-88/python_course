@@ -1,0 +1,11 @@
+import re, requests
+
+A = input()
+B = input()
+
+
+for link in re.findall(r'a href="([^"]*)"', requests.get(A).text):
+    if B in re.findall(r'a href="([^"]*)"', requests.get(link).text):
+        print('Yes')
+    else:
+        print('No')
